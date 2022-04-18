@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KutukiAssignmentApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_registration">Registration</string>
+    <string name="label_enter_phone_number">Enter Phone Number</string>
+    <string name="label_log_in">Log In</string>
+    <string name="label_verify_otp">Verify Otp</string>
+    <string name="label_forget_password">Forget Password ?</string>
+    <string name="label_register">Register</string>
+    <string name="label_enter_email_address">Enter Email Address</string>
+    <string name="label_enter_password">Enter Password</string>
+    <string name="label_age">Age</string>
+    <string name="label_name">Name</string>
+    <string name="label_already_registered">Already Registered ?</string>
+</resources>

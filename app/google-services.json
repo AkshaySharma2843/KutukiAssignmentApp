@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376118941079",
+    "project_id": "kutukiassignmentapp",
+    "storage_bucket": "kutukiassignmentapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376118941079:android:4b4d9d970d502e0b41a0d2",
+        "android_client_info": {
+          "package_name": "in.as.kutukiassignmentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376118941079-0ttlmlvqisbiov005i050kqgb4g7rule.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdPuvhhldD5GsOOX51pKXQE5Kb1-lk3ZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376118941079-0ttlmlvqisbiov005i050kqgb4g7rule.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
