@@ -2,6 +2,7 @@ package `in`.`as`.kutukiassignmentapp.di.component
 
 import `in`.`as`.kutukiassignmentapp.di.ActivityScope
 import `in`.`as`.kutukiassignmentapp.di.module.ActivityModule
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.DashBoardActivity
 import `in`.`as`.kutukiassignmentapp.ui.main.MainActivity
 import dagger.Component
 
@@ -15,4 +16,5 @@ import dagger.Component
 )
 interface ActivityComponent {
     fun inject(activity : MainActivity)
+    fun inject(activity:DashBoardActivity)
 }

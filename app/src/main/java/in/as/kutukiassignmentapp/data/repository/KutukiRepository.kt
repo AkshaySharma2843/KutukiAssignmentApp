@@ -9,8 +9,8 @@ import javax.inject.Inject
 class KutukiRepository @Inject constructor(val apiService : NetworkService)
 {
 
-    fun getCategories() = apiService.getCategory(buildUrl())
-    fun getVideosList() = apiService.getVideoList(buildVideoUrl())
+   /* fun getCategories() = apiService.getCategory(buildUrl())
+    fun getVideosList() = apiService.getVideoList(buildVideoUrl())*/
 
     private fun buildVideoUrl() = "http://www.mocky.io/v2/5e2beb5a3100006600267e4e"
 

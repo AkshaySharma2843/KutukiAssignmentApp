@@ -10,9 +10,12 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Created by Akshay Sharma on 30-03-2022.
  */
 object Networking {
+
+    const val HEADER_ACCESS_TOKEN = "Authorization"
+
     fun create(): NetworkService {
         return Retrofit.Builder()
-            .baseUrl("http://www.mocky.io/")
+            .baseUrl("https://quizmastertesting.motion.ac.in/motioneducation/")
             .client(
                 OkHttpClient.Builder()
                     .addInterceptor(

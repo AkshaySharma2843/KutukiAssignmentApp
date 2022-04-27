@@ -1,14 +1,14 @@
 package `in`.`as`.kutukiassignmentapp.di.module
 
-import `in`.`as`.kutukiassignmentapp.data.repository.KutukiRepository
+import `in`.`as`.kutukiassignmentapp.data.repository.MotionRepository
 import `in`.`as`.kutukiassignmentapp.ui.base.BaseFragment
-import `in`.`as`.kutukiassignmentapp.ui.category.CategoryViewModel
-import `in`.`as`.kutukiassignmentapp.ui.content.ContentViewModel
-import `in`.`as`.kutukiassignmentapp.ui.login.LoginViewModel
-import `in`.`as`.kutukiassignmentapp.ui.register.RegisterViewModel
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.doubts.DoubtsViewModel
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.home.ui.HomeViewModel
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.practice.PracticeViewModel
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.profile.ProfileViewModel
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.store.StoreViewModel
 import `in`.`as`.kutukiassignmentapp.utils.common.ViewModelProviderFactory
 import `in`.`as`.kutukiassignmentapp.utils.rx.SchedulerProvider
-import android.content.SharedPreferences
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.Module
@@ -27,60 +27,59 @@ class FragmentModule(private val fragment : BaseFragment<*, *>) {
     fun provideLinearLayoutManager() : LinearLayoutManager = LinearLayoutManager(fragment.activity)
 
     @Provides
-    fun provideCategoryViewModel(
-        schedulerProvider : SchedulerProvider,
+    fun provideHomeViewModel(
+        schedulerProvider: SchedulerProvider,
         compositeDisposable: CompositeDisposable,
-        kutukiRepository: KutukiRepository
-    ): CategoryViewModel = ViewModelProvider(
-        fragment, ViewModelProviderFactory(CategoryViewModel::class) {
-            CategoryViewModel(
-                schedulerProvider,
-                compositeDisposable,
-                kutukiRepository
-            )
-        }).get(CategoryViewModel::class.java)
+        motionRepository: MotionRepository
+    ) : HomeViewModel = ViewModelProvider(fragment,ViewModelProviderFactory(HomeViewModel::class){
+        HomeViewModel(schedulerProvider,compositeDisposable,motionRepository)
+    }).get(HomeViewModel::class.java)
 
     @Provides
-    fun provideContentViewModel(
-        schedulerProvider : SchedulerProvider,
+    fun providePracticeViewModel(
+        schedulerProvider: SchedulerProvider,
         compositeDisposable: CompositeDisposable,
-        kutukiRepository: KutukiRepository
-    ): ContentViewModel = ViewModelProvider(
-        fragment, ViewModelProviderFactory(ContentViewModel::class) {
-            ContentViewModel(
-                schedulerProvider,
-                compositeDisposable,
-                kutukiRepository
+        motionRepository: MotionRepository
+    ) : PracticeViewModel = ViewModelProvider(
+        fragment, ViewModelProviderFactory(PracticeViewModel::class){
+            PracticeViewModel(schedulerProvider,compositeDisposable,motionRepository)
+        }).get(PracticeViewModel::class.java)
 
-            )
-        }).get(ContentViewModel::class.java)
 
     @Provides
-    fun provideLoginViewModel(
-        schedulerProvider : SchedulerProvider,
+    fun provideDoubtsViewModel(
+        schedulerProvider: SchedulerProvider,
         compositeDisposable: CompositeDisposable,
-        sharedPreferences: SharedPreferences
-    ): LoginViewModel = ViewModelProvider(
-        fragment, ViewModelProviderFactory(LoginViewModel::class) {
-            LoginViewModel(
-                schedulerProvider,
-                compositeDisposable,
-                sharedPreferences
-            )
-        }).get(LoginViewModel::class.java)
+        motionRepository: MotionRepository
+    ) : DoubtsViewModel = ViewModelProvider(
+        fragment, ViewModelProviderFactory(DoubtsViewModel::class)
+        {
+            DoubtsViewModel(schedulerProvider,compositeDisposable,motionRepository)
+        }).get(DoubtsViewModel::class.java)
+
 
     @Provides
-    fun provideRegisterViewModel(
-        schedulerProvider : SchedulerProvider,
+    fun provideProfileViewModel(
+        schedulerProvider: SchedulerProvider,
         compositeDisposable: CompositeDisposable,
-        sharedPreferences: SharedPreferences
-    ): RegisterViewModel = ViewModelProvider(
-        fragment, ViewModelProviderFactory(RegisterViewModel::class) {
-            RegisterViewModel(
-                schedulerProvider,
-                compositeDisposable,
-                sharedPreferences
-            )
-        }).get(RegisterViewModel::class.java)
+        motionRepository: MotionRepository
+    ) : ProfileViewModel = ViewModelProvider(
+        fragment, ViewModelProviderFactory(ProfileViewModel::class)
+        {
+            ProfileViewModel(schedulerProvider,compositeDisposable,motionRepository)
+        }).get(ProfileViewModel::class.java)
+
+
+    @Provides
+    fun provideStoreViewModel(
+        schedulerProvider: SchedulerProvider,
+        compositeDisposable: CompositeDisposable,
+        motionRepository: MotionRepository
+    ) : StoreViewModel = ViewModelProvider(
+        fragment, ViewModelProviderFactory(StoreViewModel::class)
+        {
+            StoreViewModel(schedulerProvider,compositeDisposable,motionRepository)
+        }).get(StoreViewModel::class.java)
+
 
 }

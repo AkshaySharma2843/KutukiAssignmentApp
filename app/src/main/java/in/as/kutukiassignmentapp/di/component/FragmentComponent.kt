@@ -3,10 +3,11 @@ package `in`.`as`.kutukiassignmentapp.di.component
 
 import `in`.`as`.kutukiassignmentapp.di.FragmentScope
 import `in`.`as`.kutukiassignmentapp.di.module.FragmentModule
-import `in`.`as`.kutukiassignmentapp.ui.category.CategoryFragment
-import `in`.`as`.kutukiassignmentapp.ui.content.ContentFragment
-import `in`.`as`.kutukiassignmentapp.ui.login.LoginFragment
-import `in`.`as`.kutukiassignmentapp.ui.register.RegisterFragment
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.doubts.DoubtsFragment
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.home.ui.HomeFragment
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.practice.PracticeFragment
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.profile.ProfileFragment
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.store.StoreFragment
 import dagger.Component
 
 /**
@@ -20,9 +21,12 @@ import dagger.Component
 )
 interface FragmentComponent {
 
-    fun inject(login : LoginFragment)
-    fun inject(registration : RegisterFragment)
-    fun inject(categoryFragment: CategoryFragment)
-    fun inject(contentFragment : ContentFragment)
+    fun inject(home: HomeFragment)
+    fun inject(doubts:DoubtsFragment)
+    fun inject(practice: PracticeFragment)
+    fun inject(profile: ProfileFragment)
+    fun inject(store: StoreFragment)
+
+
 
 }

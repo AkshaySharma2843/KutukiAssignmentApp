@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/fragmentPractice"
+        android:title="Practice"
+        android:icon="@drawable/ic_test_active"/>
+
+    <item
+        android:id="@+id/fragmentProfile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile_icon"/>
+    <item
+        android:id="@+id/fragmentDoubts"
+        android:title="Doubts"
+        android:icon="@drawable/ic_doubts"/>
+    <item
+        android:id="@+id/fragmentStore"
+        android:title="Store"
+        android:icon="@drawable/ic_store"/>
+
+</menu>

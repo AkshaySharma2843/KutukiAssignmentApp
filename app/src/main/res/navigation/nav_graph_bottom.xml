@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="in.as.kutukiassignmentapp.ui.dashboard.home.ui.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/fragmentPractice"
+        android:name="in.as.kutukiassignmentapp.ui.dashboard.practice.PracticeFragment"
+        android:label="PracticeFragment" />
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="in.as.kutukiassignmentapp.ui.dashboard.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/fragmentDoubts"
+        android:name="in.as.kutukiassignmentapp.ui.dashboard.doubts.DoubtsFragment"
+        android:label="DoubtsFragment" />
+    <fragment
+        android:id="@+id/fragmentStore"
+        android:name="in.as.kutukiassignmentapp.ui.dashboard.store.StoreFragment"
+        android:label="StoreFragment" />
+</navigation>

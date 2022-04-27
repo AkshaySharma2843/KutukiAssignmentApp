@@ -1,6 +1,7 @@
 package `in`.`as`.kutukiassignmentapp.di.module
 
 import `in`.`as`.kutukiassignmentapp.ui.base.BaseActivity
+import `in`.`as`.kutukiassignmentapp.ui.dashboard.DashBoardViewModel
 import `in`.`as`.kutukiassignmentapp.ui.main.MainViewModel
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
@@ -34,6 +35,18 @@ class ActivityModule(private val activity: BaseActivity<*, *>){
                 schedulerProvider, compositeDisposable
             )
         }).get(MainViewModel::class.java)
+
+
+    @Provides
+    fun provideDashBoardViewModel(
+        schedulerProvider: SchedulerProvider,
+        compositeDisposable: CompositeDisposable
+    ): DashBoardViewModel = ViewModelProvider(
+        activity, ViewModelProviderFactory(DashBoardViewModel::class){
+            DashBoardViewModel(
+                schedulerProvider, compositeDisposable
+            )
+        }).get(DashBoardViewModel::class.java)
 
 
 }

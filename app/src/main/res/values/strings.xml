@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KutukiAssignmentApp</string>
+    <string name="app_name">MotionLearningNew</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_registration">Registration</string>
@@ -13,4 +13,40 @@
     <string name="label_age">Age</string>
     <string name="label_name">Name</string>
     <string name="label_already_registered">Already Registered ?</string>
+    <string name="label_user_name">User Name</string>
+    <string name="label_hi">Hi,</string>
+    <string name="label_upgrade_to_premium">Upgrade to Premium</string>
+    <string name="label_point">6356</string>
+    <string name="label_subjects">Subjects</string>
+    <string name="label_view_all">View All</string>
+    <string name="label_understanding_reality">Understanding Reality</string>
+    <string name="label_institutions">Institutions</string>
+    <string name="label_practice">Practice</string>
+    <string name="label_learn_with_motion">Learn With Motion</string>
+    <string name="label_my_course">My Course</string>
+    <string name="label_free_offerings">Free Offering</string>
+    <string name="label_your_schedule">Your Schedule</string>
+    <string name="label_get_premium">Get Premium</string>
+    <string name="label_unlock_to_full_schedule">Unlock to Full Schedule</string>
+    <string name="label_get_full_access_to_premium_account">Get full access to premium account.....</string>
+    <string name="label_cps">CPS</string>
+    <string name="label_pyq_s">PYQ\'s</string>
+    <string name="label_mock_test">Mock Test</string>
+    <string name="label_exams">Exams</string>
+    <string name="label_physics">Physics</string>
+    <integer name="int_1">1</integer>
+    <string name="label_select_subject">Select Subject</string>
+    <string name="label_chemistry">Chemistry</string>
+    <string name="label_maths">Maths</string>
+    <string name="label_choose_topic">Choose Topic</string>
+    <string name="label_motion_practice_sheets">Motion Practice sheets</string>
+    <string name="label_cps_prcatice_sheet">Targeting JEE/NEET 2022 Exam by getting practice sheets at</string>
+    <string name="label_rs_999_only">Rs.999/- Only</string>
+    <string name="label_get_now">Get Now >></string>
+    <string name="label_view_less">View Less</string>
+    <string name="label_24_dec">24,Dec</string>
+    <string name="label_enroll_now">Enroll Now</string>
+    <string name="label_full_access">To get full access user need to enroll to the course</string>
+    <string name="label_understanding_reality_content">Explore the Video Content of Motion Learning, subjects taught by renowned experts</string>
+    <string name="label_update_course">Update Course</string>
 </resources>

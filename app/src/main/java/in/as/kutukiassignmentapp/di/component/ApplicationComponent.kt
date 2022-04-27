@@ -2,6 +2,7 @@ package `in`.`as`.kutukiassignmentapp.di.component
 
 import `in`.`as`.kutukiassignmentapp.KutukiApplication
 import `in`.`as`.kutukiassignmentapp.data.repository.KutukiRepository
+import `in`.`as`.kutukiassignmentapp.data.repository.MotionRepository
 import `in`.`as`.kutukiassignmentapp.di.module.ApplicationModule
 import `in`.`as`.kutukiassignmentapp.utils.rx.SchedulerProvider
 import android.content.SharedPreferences
@@ -18,6 +19,7 @@ interface ApplicationComponent {
     fun getSchedulerProvider(): SchedulerProvider
     fun getCompositeDisposable(): CompositeDisposable
     fun getRepo(): KutukiRepository
+    fun getMotionRepo() : MotionRepository
     fun getSharedPrefs() : SharedPreferences
 
 
